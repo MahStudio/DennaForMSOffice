@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Denna.Office.Common.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <StackPanel Background="Red">
+        <Button Click="Button_Click" Content="Go to login" />
+    </StackPanel>
 </UserControl>

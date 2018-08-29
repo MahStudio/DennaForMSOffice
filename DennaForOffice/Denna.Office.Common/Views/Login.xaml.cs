@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Denna.Office.Common.Services.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,21 @@ namespace Denna.Office.Common.Views
         public Login()
         {
             InitializeComponent();
+        }
+
+        private async void login_Click(object sender, RoutedEventArgs e)
+        {
+            var _usrsvc = new UserService();
+            try
+            {
+                if (usr.Text == null && pass.Password == null)
+                    throw new Exception("Please fill blank fields");
+                
+                await _usrsvc.Login(usr.Text.Replace(" ", ""), pass.Password);
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

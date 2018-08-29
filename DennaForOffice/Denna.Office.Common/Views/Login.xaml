@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:Denna.Office.Common.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <StackPanel>
+        <TextBox Height="35" x:Name="usr" TextWrapping="Wrap" Text="username" />
+        <PasswordBox Height="35" x:Name="pass" />
+        <Button x:Name="login" Content="login" Click="login_Click"/>
+
+    </StackPanel>
 </UserControl>
