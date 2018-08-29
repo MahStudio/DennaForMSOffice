@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using Word = Microsoft.Office.Interop.Word;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Word;
+using Denna.Office.Common;
 
 namespace Denna.Office.Word
 {

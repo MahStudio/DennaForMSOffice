@@ -156,18 +156,9 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="MasterView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MasterView.Designer.cs">
-      <DependentUpon>MasterView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <EmbeddedResource Include="MasterView.resx">
-      <DependentUpon>MasterView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -196,6 +187,12 @@
       <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Denna.Office.Common\Denna.Office.Common.csproj">
+      <Project>{354dc408-3eab-461e-a5a0-90575a09ffbd}</Project>
+      <Name>Denna.Office.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Denna.Office.Word
+namespace Denna.Office.Common
 {
     public partial class MasterView : UserControl
     {
