@@ -21,9 +21,11 @@ namespace Denna.Office.Common.Views
     /// </summary>
     public partial class MainPage : UserControl
     {
+        public static MainPage current;
         public MainPage()
         {
             InitializeComponent();
+            current = this;
             _NavigationFrame.Navigate(new TodoList());
             //try
             //{

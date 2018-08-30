@@ -8,8 +8,8 @@ namespace Denna.Office.Common.Data
     {
         public static Realm GetInstance()
         {
-            var configuration = new SyncConfiguration(User.Current, new Uri("~/myRealm", UriKind.Relative)) { SchemaVersion = 1 };
-            return Realm.GetInstance(configuration);
+            //var configuration = new SyncConfiguration(User.Current, new Uri("~/myRealm", UriKind.Relative)) { SchemaVersion = 1 };
+            return Realm.GetInstance("DennaLocal.realm");
         }
     }
 }

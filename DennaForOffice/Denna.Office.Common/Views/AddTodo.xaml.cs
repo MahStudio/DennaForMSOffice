@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Denna.Office.Common.Domain;
+using Denna.Office.Common.Services.Todos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,46 @@ namespace Denna.Office.Common.Views
     /// </summary>
     public partial class AddTodo : UserControl
     {
+        TodoService _service;
         public AddTodo()
         {
+            _service = new TodoService();
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage.current._NavigationFrame.Navigate(new TodoList());
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            var start = datepic.Value;
+
+            if (Title.Text == "")
+            {
+                ErrorText.Text = "Please set a title for this alarm.";
+                return;
+            }
+
+
+            if (start < DateTime.Now)
+            {
+                ErrorText.Text = "Can't set a time in past.";
+                return;
+            }
+            var todo = new Todo()
+            {
+                Subject = Title.Text,
+                Detail = Details.Text,
+                StartTime = start,
+                Notify = 0,
+                Status = 2
+            };
+            _service.AddTodo(todo);
+
+            MainPage.current._NavigationFrame.Navigate(new TodoList());
         }
     }
 }

@@ -5,8 +5,38 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Denna.Office.Common.Views"
              mc:Ignorable="d" 
+             xmlns:window="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+             xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid Margin="0,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Width="250" x:Name="Damn" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center">
+
+                <TextBlock Name="ErrorText" Margin="30" Visibility="Visible" Foreground="Red"/>
+                <TextBox x:Name="Title" Text="" Margin="10,20,10,0" Height="35" />
+                <TextBox x:Name="Details" Text="" Margin="10,10,10,0"  />
+
+                <StackPanel Margin="0,30,0,0">
+                    <window:WindowsFormsHost >
+                        <wf:DateTimePicker x:Name="datepic" Format="Time" ></wf:DateTimePicker>
+                    </window:WindowsFormsHost>
+
+                </StackPanel>
+
+            </StackPanel>
+
+
+            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Orientation="Horizontal">
+                <Button HorizontalAlignment="Stretch" Click="Button_Click" Width="70" Foreground="#FF3A3A" Content="Dismiss" Margin="5,15" Height="45" Background="#2b2b2b"/>
+                <Button HorizontalAlignment="Stretch" Click="Button_Click_1" Width="70" Foreground="#20C8A5" Content="Save" Margin="5,15" Height="45" Background="#2b2b2b"/>
+            </StackPanel>
+        </Grid>
+
+
     </Grid>
 </UserControl>

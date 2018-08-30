@@ -71,7 +71,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants.cs" />
     <Compile Include="Data\GenericRepository.cs" />
     <Compile Include="Data\RealmContext.cs" />
     <Compile Include="Domain\Counter.cs" />
