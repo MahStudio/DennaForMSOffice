@@ -14,7 +14,7 @@ namespace Denna.Office.Common.Services.Users
         public async Task Login(string username, string password)
         {
             var credentials = Credentials.UsernamePassword(username.ToLower(), password, createUser: false);
-            var user = await User.LoginAsync(credentials, Constants.ServerUri);
+            //var user = await User.LoginAsync(credentials, Constants.ServerUri);
             User.ConfigurePersistence(UserPersistenceMode.Encrypted);
 
         }
