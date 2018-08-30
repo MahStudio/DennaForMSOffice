@@ -1,5 +1,4 @@
-﻿using Denna.Office.Common.Services.Users;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,24 +16,13 @@ using System.Windows.Shapes;
 namespace Denna.Office.Common.Views
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for TodoList.xaml
     /// </summary>
-    public partial class Login : UserControl
+    public partial class TodoList : UserControl
     {
-        public Login()
+        public TodoList()
         {
             InitializeComponent();
-        }
-
-        private async void login_Click(object sender, RoutedEventArgs e)
-        {
-            var _usrsvc = new UserService();
-
-            if (usr.Text == null && pass.Password == null)
-                throw new Exception("Please fill blank fields");
-
-            await _usrsvc.Login(usr.Text.Replace(" ", ""), pass.Password);
-
         }
     }
 }

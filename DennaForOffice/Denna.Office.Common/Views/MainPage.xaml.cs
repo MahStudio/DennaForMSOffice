@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Denna.Office.Common.Services.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,19 @@ namespace Denna.Office.Common.Views
         public MainPage()
         {
             InitializeComponent();
+            _NavigationFrame.Navigate(new TodoList());
+            //try
+            //{
+            //    if (!new UserService().IsUserLoggenIn())
+            //        _NavigationFrame.Navigate(new Login());
+            //    else
+            //        _NavigationFrame.Navigate(new TodoList());
+            //}
+            //catch
+            //{
+            //    _NavigationFrame.Navigate(new Login());
+            //}
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
